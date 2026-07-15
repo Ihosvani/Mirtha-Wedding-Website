@@ -1,0 +1,12 @@
+[
+  { "id": 1,  "first": "Ana",      "last": "García" },
+  { "id": 2,  "first": "Carlos",   "last": "Martínez" },
+  { "id": 3,  "first": "María",    "last": "López" },
+  { "id": 4,  "first": "José",     "last": "Rodríguez" },
+  { "id": 5,  "first": "Laura",    "last": "Hernández" },
+  { "id": 6,  "first": "Pedro",    "last": "Sánchez" },
+  { "id": 7,  "first": "Isabel",   "last": "Gómez" },
+  { "id": 8,  "first": "Miguel",   "last": "Díaz" },
+  { "id": 9,  "first": "Carmen",   "last": "Pérez" },
+  { "id": 10, "first": "Luis",     "last": "Fernández" }
+]

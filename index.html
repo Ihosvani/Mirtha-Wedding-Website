@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- ⚙️ Update the title/date/description before publishing -->
+  <title>Mirtha & Andres — Wedding</title>
+  <meta name="description" content="Join us to celebrate the wedding of Mirtha America Noa Zambrano and Andres Alfonso." />
+
+  <!-- Open Graph (social sharing preview) -->
+  <meta property="og:title"       content="Mirtha & Andres — Wedding" />
+  <meta property="og:description" content="Join us to celebrate the wedding of Mirtha America Noa Zambrano and Andres Alfonso." />
+  <meta property="og:image"       content="images/bg.jpg" />
+  <meta property="og:type"        content="website" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lato:wght@400;700&display=swap" rel="stylesheet" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ====================================================
+       LANGUAGE TOGGLE BAR
+  ===================================================== -->
+  <header class="lang-bar" role="banner">
+    <div
+      class="lang-toggle"
+      id="langToggle"
+      role="switch"
+      aria-checked="false"
+      aria-label="Toggle language"
+      tabindex="0"
+      data-lang="en"
+    >
+      <span class="lang-label active" id="labelEN">EN</span>
+      <div class="toggle-pill" aria-hidden="true"></div>
+      <span class="lang-label" id="labelES">ES</span>
+    </div>
+  </header>
+
+
+  <!-- ====================================================
+       HERO SECTION
+  ===================================================== -->
+  <section class="hero" id="home" aria-label="Hero">
+    <div class="hero-bg" role="img" aria-label="Wedding background"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-en="We are getting married" data-es="Nos casamos">We are getting married</p>
+
+      <h1 class="hero-names">
+        Mirtha<br>
+        <span class="hero-ampersand">&amp;</span>
+        Andres
+      </h1>
+
+      <div class="hero-divider" aria-hidden="true">
+        <span class="hero-divider-line"></span>
+        <span class="hero-divider-icon">✦</span>
+        <span class="hero-divider-line"></span>
+      </div>
+
+      <!-- ⚙️ Replace with the actual wedding date -->
+      <p class="hero-date-tag" id="heroDate">
+        <!-- Date injected by script.js from WEDDING_CONFIG -->
+      </p>
+
+      <div class="hero-cta">
+        <a href="#rsvp" class="btn btn-gold" data-en="Confirm Attendance" data-es="Confirmar Asistencia">
+          ✉ Confirm Attendance
+        </a>
+        <a href="#details" class="btn btn-outline" data-en="See Details" data-es="Ver Detalles">
+          ↓ See Details
+        </a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ====================================================
+       DETAILS SECTION
+  ===================================================== -->
+  <section class="details-section" id="details" aria-labelledby="detailsTitle">
+    <div class="section-inner" style="text-align:center;">
+      <span class="section-badge" data-en="Event Details" data-es="Detalles del Evento">Event Details</span>
+      <h2 class="section-title" id="detailsTitle" data-en="Wedding Day" data-es="Día de Bodas">Wedding Day</h2>
+      <p class="section-subtitle" data-en="We look forward to celebrating this special day with you" data-es="Esperamos celebrar este día especial contigo">
+        We look forward to celebrating this special day with you
+      </p>
+      <div class="gold-rule" aria-hidden="true"></div>
+
+      <div class="details-cards">
+
+        <!-- Date card -->
+        <div class="detail-card">
+          <span class="detail-icon" aria-hidden="true">📅</span>
+          <p class="detail-label" data-en="Date" data-es="Fecha">Date</p>
+          <p class="detail-value" id="cardDate"><!-- injected --></p>
+        </div>
+
+        <!-- Time card -->
+        <div class="detail-card">
+          <span class="detail-icon" aria-hidden="true">🕓</span>
+          <p class="detail-label" data-en="Time" data-es="Hora">Time</p>
+          <p class="detail-value">4:30 PM – 10:00 PM</p>
+        </div>
+
+        <!-- Venue card -->
+        <div class="detail-card">
+          <span class="detail-icon" aria-hidden="true">🌿</span>
+          <p class="detail-label" data-en="Venue" data-es="Lugar">Venue</p>
+          <p class="detail-value">Finka Las Palmas</p>
+          <p class="detail-sub">10401 SW 186th Ave<br>Miami, FL 33196</p>
+        </div>
+
+      </div><!-- /.details-cards -->
+
+      <div class="action-buttons">
+        <!-- Map Button -->
+        <a
+          href="https://www.google.com/maps/search/?api=1&query=10401+SW+186th+Ave,+Miami,+FL+33196"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn btn-sage"
+          data-en="📍 Open in Maps"
+          data-es="📍 Abrir en Maps"
+          aria-label="Open venue in Google Maps"
+        >
+          📍 Open in Maps
+        </a>
+
+        <!-- Calendar Button -->
+        <button
+          id="calendarBtn"
+          class="btn btn-gold"
+          data-en="🗓 Add to Calendar"
+          data-es="🗓 Agregar al Calendario"
+          aria-haspopup="dialog"
+        >
+          🗓 Add to Calendar
+        </button>
+      </div>
+
+    </div><!-- /.section-inner -->
+  </section>
+
+
+  <!-- ====================================================
+       RSVP SECTION
+  ===================================================== -->
+  <section class="rsvp-section" id="rsvp" aria-labelledby="rsvpTitle">
+    <div class="section-inner" style="text-align:center;">
+      <span class="section-badge" data-en="RSVP" data-es="Confirmar">RSVP</span>
+      <h2 class="section-title" id="rsvpTitle" data-en="Kindly Reply" data-es="Respuesta Amable">Kindly Reply</h2>
+      <p class="section-subtitle" data-en="Please confirm your attendance by the date indicated" data-es="Por favor confirma tu asistencia antes de la fecha indicada">
+        Please confirm your attendance by the date indicated
+      </p>
+      <div class="gold-rule" aria-hidden="true"></div>
+
+      <!-- ⚙️ Replace YOUR_FORM_ID with your Formspree form ID.
+           See README.md for setup instructions. -->
+      <form
+        id="rsvpForm"
+        class="rsvp-form"
+        action="https://formspree.io/f/YOUR_FORM_ID"
+        method="POST"
+        novalidate
+        aria-label="RSVP form"
+      >
+        <!-- Hidden fields for metadata -->
+        <input type="hidden" name="_subject" value="New RSVP — Mirtha & Andres Wedding" />
+        <input type="hidden" name="_replyto" value="" />
+
+        <!-- Guest Name -->
+        <div class="form-group">
+          <label class="form-label" for="guestName" data-en="Full Name" data-es="Nombre Completo">Full Name</label>
+          <div class="autocomplete-wrapper">
+            <input
+              type="text"
+              id="guestName"
+              name="guest_name"
+              class="form-control"
+              autocomplete="off"
+              required
+              data-placeholder-en="Type your name…"
+              data-placeholder-es="Escribe tu nombre…"
+              placeholder="Type your name…"
+              aria-autocomplete="list"
+              aria-controls="guestSuggestions"
+            />
+            <ul class="autocomplete-list" id="guestSuggestions" role="listbox" aria-label="Guest name suggestions"></ul>
+          </div>
+        </div>
+
+        <!-- Attendance -->
+        <div class="form-group">
+          <label class="form-label" data-en="Will you attend?" data-es="¿Asistirás?">Will you attend?</label>
+          <div class="radio-group" role="radiogroup">
+            <label class="radio-label">
+              <input type="radio" name="attendance" value="yes" required />
+              <span data-en="✅ Yes, I'll be there!" data-es="✅ ¡Sí, estaré!">✅ Yes, I'll be there!</span>
+            </label>
+            <label class="radio-label">
+              <input type="radio" name="attendance" value="no" />
+              <span data-en="❌ Sorry, I can't make it" data-es="❌ Lo siento, no podré ir">❌ Sorry, I can't make it</span>
+            </label>
+          </div>
+        </div>
+
+        <!-- Number of Guests -->
+        <div class="form-group" id="guestCountGroup">
+          <label class="form-label" data-en="Number of guests (including yourself)" data-es="Número de invitados (incluyéndote)">
+            Number of guests (including yourself)
+          </label>
+          <div class="guests-count-wrapper">
+            <button type="button" class="count-btn" id="countMinus" aria-label="Decrease guest count">−</button>
+            <span class="count-value" id="countDisplay">1</span>
+            <button type="button" class="count-btn" id="countPlus"  aria-label="Increase guest count">+</button>
+            <input type="hidden" name="num_guests" id="numGuests" value="1" />
+          </div>
+        </div>
+
+        <!-- Dietary / Notes -->
+        <div class="form-group">
+          <label class="form-label" for="dietaryNotes" data-en="Dietary restrictions or notes (optional)" data-es="Restricciones dietéticas o notas (opcional)">
+            Dietary restrictions or notes (optional)
+          </label>
+          <textarea
+            id="dietaryNotes"
+            name="notes"
+            class="form-control"
+            rows="3"
+            data-placeholder-en="Allergies, vegan, etc…"
+            data-placeholder-es="Alergias, vegano, etc…"
+            placeholder="Allergies, vegan, etc…"
+          ></textarea>
+        </div>
+
+        <!-- Submit -->
+        <button type="submit" class="btn btn-gold form-submit" id="submitBtn" data-en="Send RSVP ✦" data-es="Enviar RSVP ✦">
+          Send RSVP ✦
+        </button>
+
+        <!-- Success / Error messages -->
+        <div class="form-message" id="formSuccess" role="alert">
+          <span data-en="🎉 Thank you! Your RSVP has been received. We can't wait to celebrate with you!" data-es="🎉 ¡Gracias! Tu confirmación fue recibida. ¡No podemos esperar para celebrar contigo!">
+            🎉 Thank you! Your RSVP has been received. We can't wait to celebrate with you!
+          </span>
+        </div>
+        <div class="form-message" id="formError" role="alert">
+          <span data-en="⚠️ Something went wrong. Please try again or contact us directly." data-es="⚠️ Algo salió mal. Por favor intenta de nuevo o contáctanos directamente.">
+            ⚠️ Something went wrong. Please try again or contact us directly.
+          </span>
+        </div>
+
+      </form>
+    </div><!-- /.section-inner -->
+  </section>
+
+
+  <!-- ====================================================
+       FOOTER
+  ===================================================== -->
+  <footer>
+    <p class="footer-names">Mirtha &amp; Andres</p>
+    <p data-en="Together forever · Miami, FL" data-es="Juntos para siempre · Miami, FL">Together forever · Miami, FL</p>
+    <p class="footer-note" data-en="Made with love ♥" data-es="Hecho con amor ♥">Made with love ♥</p>
+  </footer>
+
+
+  <!-- ====================================================
+       ADD-TO-CALENDAR MODAL
+  ===================================================== -->
+  <div class="modal-backdrop" id="calendarModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal">
+      <h3 id="modalTitle" data-en="Add to Calendar" data-es="Agregar al Calendario">Add to Calendar</h3>
+      <p data-en="Choose your calendar app:" data-es="Elige tu aplicación de calendario:">Choose your calendar app:</p>
+      <div class="modal-options">
+        <a id="gcalLink" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-sage" data-en="🗓 Google Calendar" data-es="🗓 Google Calendar">
+          🗓 Google Calendar
+        </a>
+        <button id="icsDownload" class="btn btn-wood" data-en="📥 Download .ics (Apple / Outlook)" data-es="📥 Descargar .ics (Apple / Outlook)">
+          📥 Download .ics (Apple / Outlook)
+        </button>
+      </div>
+      <button class="modal-close" id="closeModal" data-en="Close" data-es="Cerrar">Close</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
